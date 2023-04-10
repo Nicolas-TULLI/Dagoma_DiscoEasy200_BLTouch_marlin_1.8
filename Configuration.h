@@ -124,7 +124,7 @@
 
 // Optional custom name for your RepStrap or other custom machine
 // Displayed in the LCD "Ready" message
-#define CUSTOM_MACHINE_NAME "DisCusto200"
+#define CUSTOM_MACHINE_NAME "DiscoCusto200"
 
 // Define this to set a unique identifier for this printer, (Used by some programs to differentiate between machines)
 // You can use an online service to generate a random UUID. (eg http://www.uuidgenerator.net/version4)
@@ -278,10 +278,17 @@
   #define K1 0.95 //smoothing factor within the PID
 
   // If you are using a pre-configured hotend then you can use one of the value sets by uncommenting it
+  
+  // PID autotune
+  #define  DEFAULT_Kp 89.49
+  #define  DEFAULT_Ki 16.55
+  #define  DEFAULT_Kd 120.97
+
+
   // Ultimaker
-  #define  DEFAULT_Kp 32.48
-  #define  DEFAULT_Ki 6.4
-  #define  DEFAULT_Kd 41.25
+  // #define  DEFAULT_Kp 32.48
+  // #define  DEFAULT_Ki 6.4
+  // #define  DEFAULT_Kd 41.25
 
   // MakerGear
   //#define  DEFAULT_Kp 32.48
