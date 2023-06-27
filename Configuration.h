@@ -124,7 +124,7 @@
 
 // Optional custom name for your RepStrap or other custom machine
 // Displayed in the LCD "Ready" message
-#define CUSTOM_MACHINE_NAME "DiscoCusto200"
+#define CUSTOM_MACHINE_NAME "HotDiscoCusto"
 
 // Define this to set a unique identifier for this printer, (Used by some programs to differentiate between machines)
 // You can use an online service to generate a random UUID. (eg http://www.uuidgenerator.net/version4)
@@ -218,7 +218,7 @@
 #define TEMP_SENSOR_1 0
 #define TEMP_SENSOR_2 0
 #define TEMP_SENSOR_3 0
-#define TEMP_SENSOR_BED 0
+#define TEMP_SENSOR_BED 1
 
 // This makes temp sensor 1 a redundant sensor for sensor 0. If the temperatures difference between these sensors is to high the print will be aborted.
 //#define TEMP_SENSOR_1_AS_REDUNDANT
@@ -227,12 +227,12 @@
 // Extruder temperature must be close to target for this long before M109 returns success
 #define TEMP_RESIDENCY_TIME 15
 #define TEMP_HYSTERESIS 4
-#define TEMP_WINDOW 3
+#define TEMP_WINDOW 1
 
 // Bed temperature must be close to target for this long before M190 returns success
 #define TEMP_BED_RESIDENCY_TIME 10  // (seconds)
 #define TEMP_BED_HYSTERESIS 3       // (degC) range of +/- temperatures considered "close" to the target one
-#define TEMP_BED_WINDOW 3
+#define TEMP_BED_WINDOW 1
 
 // The minimal temperature defines the temperature below which the heater will not be enabled It is used
 // to check that the wiring to the thermistor is not broken.
@@ -250,7 +250,7 @@
 #define HEATER_1_MAXTEMP 275
 #define HEATER_2_MAXTEMP 275
 #define HEATER_3_MAXTEMP 275
-#define BED_MAXTEMP 150
+#define BED_MAXTEMP 130
 
 // If you want the M105 heater power reported in watts, define the BED_WATTS, and (shared for all extruders) EXTRUDER_WATTS
 //#define EXTRUDER_WATTS (12.0*12.0/6.7) // P=U^2/R
@@ -341,6 +341,16 @@
   //#define  DEFAULT_bedKp 182.79
   //#define  DEFAULT_bedKi 14.84
   //#define  DEFAULT_bedKd 563.01
+
+   // DiscoEasy200
+  //#define  DEFAULT_bedKp 182.79
+  //#define  DEFAULT_bedKi 14.84
+  //#define  DEFAULT_bedKd 563.01
+
+  // My own
+  #define  DEFAULT_bedKp 445.15
+  #define  DEFAULT_bedKi 81.10
+  #define  DEFAULT_bedKd 610.86
 
   // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
 #endif // PIDTEMPBED
