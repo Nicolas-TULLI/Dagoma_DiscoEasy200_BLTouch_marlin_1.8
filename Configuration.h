@@ -280,10 +280,13 @@
   // If you are using a pre-configured hotend then you can use one of the value sets by uncommenting it
   
   // PID autotune
-  #define  DEFAULT_Kp 89.49
-  #define  DEFAULT_Ki 16.55
-  #define  DEFAULT_Kd 120.97
+  // #define  DEFAULT_Kp 89.49
+  // #define  DEFAULT_Ki 16.55
+  // #define  DEFAULT_Kd 120.97
 
+  #define  DEFAULT_Kp 60.34
+  #define  DEFAULT_Ki 9.57
+  #define  DEFAULT_Kd 95.10
 
   // Ultimaker
   // #define  DEFAULT_Kp 32.48
@@ -314,7 +317,7 @@
 // If your configuration is significantly different than this and you don't understand the issues involved, you probably
 // shouldn't use bed PID until someone else verifies your hardware works.
 // If this is enabled, find your own PID constants below.
-//#define PIDTEMPBED
+#define PIDTEMPBED
 
 //#define BED_LIMIT_SWITCHING
 
@@ -348,9 +351,9 @@
   //#define  DEFAULT_bedKd 563.01
 
   // My own
-  #define  DEFAULT_bedKp 445.15
-  #define  DEFAULT_bedKi 81.10
-  #define  DEFAULT_bedKd 610.86
+  #define  DEFAULT_bedKp 377.48
+  #define  DEFAULT_bedKi 69.88
+  #define  DEFAULT_bedKd 509.74
 
   // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
 #endif // PIDTEMPBED
